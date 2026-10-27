@@ -1,26 +1,6 @@
 # Power-BI-DataCo-Sales-Analysis
 Power BI portfolio project analyzing sales performance, profitability, and delivery operations using data modeling, DAX, and Power Query.
 
-# Data Source
-
-This project uses the DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS dataset, available on Kaggle.
-
-Dataset: DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS
-
-**Original dataset:** [DataCo Supply Chain Dataset — Mendeley Data](https://data.mendeley.com/datasets/8gx2fvg2k6/5)
-
-**Dataset on Kaggle:** [DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)
-
-Main data file: DataCoSupplyChainDataset.csv
-
-Data domain: Supply chain operations, sales, product categories, customers, and shipping performance.
-
-The dataset contains structured supply chain data and supplementary documentation describing its variables. The original dataset also includes a separate file with tokenized access logs.
-
-This project focuses on the structured transactional data used to analyze sales performance, profitability, customer segments, and delivery outcomes.
-
-Data attribution: The dataset is associated with Fabian Constante, Fernando Silva, and António Pereira, as acknowledged on the Kaggle dataset page.
-
 # Sales Performance Analysis — Power BI
 
 ## Project Overview
