@@ -70,6 +70,7 @@ The findings should be interpreted in the context of the dataset and the definit
 ## Files
 
 - `Sales_DataCo_Analysis2026.pbix` — Power BI report
+- `Sales_DataCo_Analysis.pdf` - PDF version of report
 - `images/` — dashboard screenshots
 
 ## Notes
