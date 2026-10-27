@@ -37,13 +37,22 @@ A high-level view of sales, profit, profit margin, monthly sales trends, product
 
 A comparison of customer segments in terms of sales, profitability, and delivery outcomes.
 
+![Customer Analysis](images/Sales_DataCo_Analysis2.png)
+
 ### 3. Product Category Profitability
 
 An exploratory comparison of product categories by sales and profit margin.
 
+
+![Product Category Profitability](images/Sales_DataCo_Analysis3.png)
+
 ### 4. Sales Trends
 
 A month-to-month analysis of sales changes over time.
+
+
+![Sales Trends](images/Sales_DataCo_Analysis4.png)
+
 
 ## Tools and Techniques
 
