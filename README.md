@@ -30,6 +30,9 @@ This project focuses on the structured transactional data used to analyze sales 
 
 A high-level view of sales, profit, profit margin, monthly sales trends, product category performance, and delivery outcomes by shipping method.
 
+![Executive Overview](images/Sales_DataCo_Analysis1.png)
+
+
 ### 2. Customer Analysis
 
 A comparison of customer segments in terms of sales, profitability, and delivery outcomes.
