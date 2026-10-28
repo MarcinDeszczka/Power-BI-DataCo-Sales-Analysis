@@ -205,7 +205,7 @@ The report uses interactive charts and slicers to let users explore results acro
 ## Files
 
 - `Sales_DataCo_Analysis2026.pbix` — Power BI report
-- `Sales_DataCo_Analysis.pdf` - PDF version of report
+- `Sales_DataCo_Analysis2026.pdf` - PDF version of report
 - `images/` — dashboard screenshots
 
 ## Notes
