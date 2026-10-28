@@ -72,7 +72,127 @@ The month-over-month change chart reveals a major collapse in sales over the las
 
 It is worth noting that this situation is driven by the complete withdrawal of several product categories—such as fishing, cleats, and camping & hiking—which were historically DataCo’s largest sales categories (see slide 3). Interestingly, the last three months have seen significant growth in categories like Video Games, Sporting Goods, Women's Clothing, and Toys, with increases exceeding 100%.
 
+## Technical Implementation
 
+### 1. Data Preparation — Power Query
+
+- Removed unnecessary columns, including customer email addresses, passwords, names, and unused product fields.
+- Investigated data completeness and removed the almost entirely empty ZIP code column.
+- Standardized country names, data types, number formats, and date values.
+- Added an index column to support data preparation.
+- Checked column value distributions and verified the uniqueness of `Order Item Id`.
+- Validated the consistency of `Late_delivery_risk` and `Delivery Status` using a custom logical rule in Power Query. No inconsistencies were found in the checked records.
+
+### 2. Data Modeling
+
+- Organized the data into a central sales fact table (`FactSales`) and supporting dimension tables for products, customer segments, shipping methods, and dates.
+- Created one-to-many relationships between the fact table and dimension tables, using single-direction filtering from dimensions to facts.
+- Built a calendar table in DAX with year, month number, month name, and year-month attributes.
+- Used a dedicated date column to support time-based analysis.
+
+**Data model:**
+
+![Power BI data model](images/Data_Modeling.png)
+
+### 3. DAX Measures
+
+The report uses DAX measures to calculate key business metrics and analyze changes over time.
+
+**Total Sales** — total sales value.
+
+```dax
+Total Sales =
+SUM(FactSales[Sales])
+```
+
+**Total Profit** — total profit, based on the selected profit field and its verified level of granularity.
+
+```dax
+Total Profit =
+SUM(FactSales[Order Profit Per Order])
+```
+
+**Profit Margin %** — profit divided by sales.
+
+```dax
+Profit Margin % =
+DIVIDE(
+    [Total Profit],
+    [Total Sales]
+)
+```
+
+**Order Count** — distinct count of orders.
+
+```dax
+Order Count =
+DISTINCTCOUNT(FactSales[Order ID])
+```
+
+**Units Sold** — total quantity sold.
+
+```dax
+Units Sold =
+SUM(FactSales[Order Item Quantity])
+```
+
+**Sales Previous Month** — sales in the previous month, calculated using `CALCULATE` and `DATEADD`.
+
+```dax
+Sales Previous Month =
+CALCULATE(
+    [Total Sales],
+    DATEADD(TabDate[Date], -1, MONTH)
+)
+```
+
+**Sales MoM Change** — absolute month-over-month change in sales.
+
+```dax
+Sales MoM Change =
+[Total Sales] - [Sales Previous Month]
+```
+
+**Sales MoM Change %** — percentage month-over-month change in sales.
+
+```dax
+Sales MoM Change % =
+DIVIDE(
+    [Sales MoM Change],
+    [Sales Previous Month]
+)
+```
+
+**Sales YTD** — cumulative sales from the beginning of the year, calculated using `TOTALYTD`.
+
+```dax
+Sales YTD =
+TOTALYTD(
+    [Total Sales],
+    TabDate[Date]
+)
+```
+
+These measures support dynamic analysis by date, product category, customer segment, and shipping method.
+
+### 4. Report Design and Business Analysis
+
+The Power BI report contains four pages:
+
+- **Executive Overview** — high-level KPIs, sales trends, profitability, and shipping performance.
+- **Customer Analysis** — comparison of sales, profit margins, and late-order rates across customer segments.
+- **Product Category Profitability** — comparison of product categories by sales, profit, and profit margin.
+- **Sales Trends** — month-over-month sales changes and category-level patterns.
+
+The report uses interactive charts and slicers to let users explore results across different dates, product categories, and shipping methods.
+
+### 5. Data Quality and Limitations
+
+- Checked the consistency between delivery risk flags and delivery statuses.
+- Investigated identifier uniqueness and missing values during data preparation.
+- Examined monthly sales declines and category-level changes without assuming that observed patterns necessarily indicate a specific business cause.
+- Identified a sharp decline in sales during the final months of the dataset. Further investigation is needed to establish whether this reflects actual business patterns or incomplete reporting periods.
+  
 ## Tools and Techniques
 
 - **Power BI Desktop** — report development and visualization
@@ -80,11 +200,7 @@ It is worth noting that this situation is driven by the complete withdrawal of s
 - **DAX** — measures and time-based calculations
 - **Data Modeling** — relationships between sales data and supporting dimension tables
 
-## Key Findings
 
-The report examines differences in sales performance across product categories and customer segments, as well as variations in delivery outcomes by shipping method.
-
-The findings should be interpreted in the context of the dataset and the definitions of the underlying measures.
 
 ## Files
 
