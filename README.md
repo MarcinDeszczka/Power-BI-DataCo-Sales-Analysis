@@ -33,7 +33,7 @@ A high-level view of sales, profit, profit margin, monthly sales trends, product
 ![Executive Overview](images/Sales_DataCo_Analysis1.png)
 
 Shipping performance varies substantially by shipping method: the reported late-order share ranges from 38.13% for Standard Class to 95.27% for First Class.
-Looking at the data from the last three months, we can see a major collapse in the sales trend, with figures dropping to nearly zero.
+An analysis of data from the last three months reveals a significant collapse in the sales trend – these figures have fallen by 70%.
 The categories that generate the most profit are Fishing, Cleats, and Camping & Hiking.
 
 Note: the "profit" category is distinct from the "Profit Margin KPI."
@@ -50,7 +50,7 @@ Regarding delays across customer segments, there are no significant differences:
 
 Similarly, there are no major differences between customer segments in terms of the Profit Margin KPI. The Consumer segment performs best (approx. 10.85%), while the Home Office segment performs worst (approx. 10.6%); the differences are, therefore, minimal.
 
-Total sales were highest in the Consumer segment and lowest in the Home Office segment. Between 2015 and 2017, the disparities were quite substantial—with the largest segment generating three times the sales of the smallest—excluding 2018, a year marked by a sales collapse, during which sales figures were minimal across all segments.
+Total sales were highest in the Consumer segment and lowest in the Home Office segment. Between 2015 and 2017, the disparities were quite substantial—with the largest segment generating three times the sales of the smallest—excluding 2018, where our data ends in January, during which sales figures were minimal across all segments.
 
 ### 3. Product Category Profitability
 
@@ -70,7 +70,7 @@ A month-to-month analysis of sales changes over time.
 
 The month-over-month change chart reveals a major collapse in sales over the last three months: January 2018 saw a 34% decline, while November 2017 marked a record drop of 42%.
 
-It is worth noting that this situation is driven by the complete withdrawal of several product categories—such as fishing, cleats, and camping & hiking—which were historically DataCo’s largest sales categories (see slide 3). Interestingly, the last three months have seen significant growth in categories like Video Games, Sporting Goods, Women's Clothing, and Toys, with increases exceeding 100%.
+This coincides with no recorded sales in several of the largest categories (Fishing, Cleats, Camping & Hiking) during the last three months. The data do not show whether this is a business change or an incomplete reporting period. Interestingly, the last three months have seen significant growth in categories like Video Games, Sporting Goods, Women's Clothing, and Toys, with increases exceeding 100%.
 
 ## Technical Implementation
 
