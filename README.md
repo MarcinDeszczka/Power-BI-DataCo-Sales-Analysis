@@ -86,7 +86,7 @@ This coincides with no recorded sales in several of the largest categories (Fish
 ### 2. Data Modeling
 
 - Organized the data into a central sales fact table (`FactSales`) and supporting dimension tables for products, customer segments, shipping methods, and dates.
-- Created one-to-many relationships between the fact table and dimension tables, using single-direction filtering from dimensions to facts.
+- "One-to-many" relationships were established between the fact table and the dimension tables, using single-directional filtering—from the dimensions to the facts. For the relationship between FactSales and QA DeliveryRisk, a one-to-one, bi-directional relationship was created.
 - Built a calendar table in DAX with year, month number, month name, and year-month attributes.
 - Used a dedicated date column to support time-based analysis.
 
