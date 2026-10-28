@@ -60,7 +60,7 @@ Eksploracyjne porównanie kategorii produktów pod względem sprzedaży i marży
 
 ![Product Category Profitability](images/Sales_DataCo_Analysis3.png)
 
-Kategoria Gold Bags & Carts osiąga najwyższą marżę zysku (17,5%), natomiast najniższą odnotowano w kategorii Strength Training (0,6%).
+Kategoria Golf Bags & Carts osiąga najwyższą marżę zysku (17,5%), natomiast najniższą odnotowano w kategorii Strength Training (0,6%).
 
 W kategoriach, których sprzedaż przekracza milion, marża zysku mieści się zazwyczaj w przedziale około 10–11%.
 
